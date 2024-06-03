@@ -1,5 +1,4 @@
-﻿using ApiProduto.Infra.Data.Constants;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -9,8 +8,6 @@ public class RoleMapping : IEntityTypeConfiguration<IdentityRole>
 {
     public void Configure(EntityTypeBuilder<IdentityRole> builder)
     {
-        builder.ToTable("AspNetRoles", Constantes.Schemas.Sistema);
-
         builder.Property(r => r.Id)
             .HasColumnName("Id")
             .HasColumnType("serial")
